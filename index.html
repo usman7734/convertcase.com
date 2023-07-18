@@ -23,6 +23,9 @@
         gtag('config', 'G-CYCEB3C5ZW');
     </script>
     <style>
+        body{
+            transition-duration: 2s;
+        }
         .btn-box a {
             border: 2px solid white;
             margin: 20px;
@@ -33,6 +36,7 @@
             text-decoration: none;
             border-radius: 7px;
             box-shadow: grey 9px 10px 10px;
+            transition-duration: 2s;
         }
 
         .btn-box {
@@ -42,22 +46,29 @@
 
         form textarea {
             font-size: 25px;
+            transition-duration: 2s;
+            background-color: white;
         }
 
         .night .btn-box a {
             border: 2px solid white;
             box-shadow: black 5px 5px 5px;
+            transition-duration: 2s;
         }
 
         .night {
             background-color: black;
             color: white;
+            transition-duration: 2s;
+       
         }
 
         .night textarea {
             background-color: black;
             color: white;
             font-size: 25px;
+            transition-duration: 2s;
+        
         }
 
         h1 {
@@ -119,18 +130,21 @@
             .btn-box a {
                 margin: 5px;
             }
+
         }
+
         /* Responsiveness Ends */
     </style>
 </head>
+
 <body id="body1" class="random">
     <div class="container-lg container-fluid">
         <div class="row">
-            <div class="col-md-12 text-center mt-5">
+            <div class="col-md-12 text-center mt-md-5 ">
                 <h1>Convert Case With Counter </h1><i class="bi bi-moon-stars-fill desktop-night-icon"
                     onclick="nightview()"></i>
                 <form action="">
-                    <textarea name="rowdata1" id="rowdata" cols="70" rows="7"></textarea>
+                    <textarea name="rowdata1" id="rowdata" cols="70" rows="7" cla></textarea>
                     <div class="btn-box">
                         <a onclick="lowercasefunction()" href="#">lower case</a>
                         <a onclick="uppercasefunction()" href="#">UPPER CASE</a>
@@ -139,6 +153,7 @@
                             <a id="copyButton" onclick="copyToClipboard()" href="#">Copy to Clipboard</a>
                             <a href="#" onclick="clearfunction()">Clear</a> <i
                                 class="bi bi-moon-stars-fill mobile-night-icon" onclick="nightview()"></i> </span>
+
                     </div>
                     <h3 class="h1"> <label for="" id="word">0 </label> Words and <label for="" id="char">0</label>
                         Characters</h3>
@@ -205,6 +220,7 @@
             copyButton.textContent = "Copy to Clipboard";
         });
 
+
         rowdata.addEventListener('input', function () {
             var text = this.value;
             let char = text.length;
@@ -218,7 +234,12 @@
             })
 
             document.getElementById("word").innerHTML = cleanList.length;
+
+
         });
+
+
+
 
     </script>
 </body>
